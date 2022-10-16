@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<WeatherForecastContext>(opt =>
-    opt.UseInMemoryDatabase("WeatherForecastList"));
+    opt.UseSqlServer("Server=localhost,1433; Database=Api; User=<user>; Password=<password>;"));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

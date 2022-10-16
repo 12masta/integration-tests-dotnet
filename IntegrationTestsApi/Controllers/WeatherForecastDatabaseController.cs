@@ -12,11 +12,11 @@ namespace IntegrationTestsApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class WeatherForecastDatabase : ControllerBase
+    public class WeatherForecastDatabaseController : ControllerBase
     {
         private readonly WeatherForecastContext _context;
 
-        public WeatherForecastDatabase(WeatherForecastContext context)
+        public WeatherForecastDatabaseController(WeatherForecastContext context)
         {
             _context = context;
         }
